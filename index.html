@@ -16,6 +16,11 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <!-- Material Design Lite -->
 
+    <!-- Essential Audio Player -->
+    <link rel="stylesheet" href="/lib/essential_audio.css" />
+    <script src="/lib/essential_audio.js"></script>
+    <!-- Essential Audio Player -->
+
     <style type="text/css">
         #app {
             display: flex;
@@ -37,12 +42,13 @@
         .view {
             background-color: white;
             border-radius: 10px;
-            width: 60%;
-            height: 75%;
+            width: 60vw;
+            height: 75vh;
             transition: 0.5s;
             opacity: 0;
             pointer-events: none;
             display: none;
+            flex-flow: column;
         }
 
         .active {
@@ -63,10 +69,34 @@
             line-height: 1.3em;
         }
 
-        .centeraaaah {
+        .hcenter {
             display: flex;
             justify-content: center;
+        }
+
+        .vcenter {
+            display: flex;
+            flex: 1 1 auto;
             align-items: center;
+            flex-flow: column;
+        }
+
+        #ding2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 70px;
+            grid-gap: 50px;
+        }
+
+        @media (max-width:800px) {
+            #ding2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .playerbox {
+            align-items: center;
+            display: flex;
         }
     </style>
 
@@ -76,14 +106,14 @@
 <body>
     <h1>Moment geduld aub...</h1>
     <div id="app">
-        <div class="view active" style="display: block;">
+        <div class="view">
             <h1>Welkom bij de app!</h1>
             <p>
                 Verhaaltje, <br>
                 Onderzoek naar a=432 bla bla bal bla <br>
-                Je krijgt nu een paar vragen, bla bla bla. <br> 
+                Je krijgt nu een paar vragen, bla bla bla. <br>
             </p>
-            <div class="centeraaaah">
+            <div class="hcenter">
                 <button onclick="nextView()"
                     class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                     Start!
@@ -91,7 +121,31 @@
             </div>
         </div>
         <div class="view">
-            <h1>Welkom bij de app!</h1>
+            <h1>Welke klinkt meer ontspannend?</h1>
+            <div id="ding2">
+                <div class="playerbox">
+                    <div class="essential_audio" data-scratch
+                        data-url="https://essential-audio-player.net/audio/Song.mp3"><span class="no_js">Please activate
+                            JavaScript for the audio player.</span>
+                    </div>
+                </div>
+                <button onclick="nextView()"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    A
+                </button>
+
+                <div class="playerbox">
+                    <div class="essential_audio" data-scratch
+                        data-url="https://essential-audio-player.net/audio/Song.mp3"><span class="no_js">Please activate
+                            JavaScript for the audio player.</span>
+                    </div>
+                </div>
+                <button onclick="nextView()"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    B
+                </button>
+
+            </div>
         </div>
         <div class="view" id="v1">
             <h1>Welkom bij de app!</h1>
