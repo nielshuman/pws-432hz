@@ -31,4 +31,10 @@ const switchView = (n) => {
     }, 400);
 };
 
+function refreshView() {
+    switchView(currentView);
+}
+
+
+
 // nextView();
