@@ -2,6 +2,7 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 let currentView = 0;
+
 const views = $$('.view');
 views[currentView].style.display = 'flex';
 views[currentView].classList.add('active');
@@ -35,6 +36,6 @@ function refreshView() {
     switchView(currentView);
 }
 
-
+// switchView(0);
 
 // nextView();

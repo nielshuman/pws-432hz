@@ -1,4 +1,4 @@
-let currentSong = 0;
+let currentSong;
 let song_order = [];
 let votes = [];
 
@@ -28,19 +28,16 @@ function shuffle(array) {
 fetch('/audio.yml').then(r=>r.text()).then(t => {
     const audio = jsyaml.load(t);
     song_order = shuffle(audio.slice(0)).slice(0, 20);
-    
-    $('#audioa').dataset.url = song_order[currentSong].a.filename;
-    $('#audiob').dataset.url = song_order[currentSong].b.filename;
-    
+    switchSong(0);
 });
 
 function switchSong(n) {
     currentSong = n;
+    try {$('#progress').MaterialProgress.setProgress(((currentSong) / song_order.length) * 100);} catch(e) {}   
     $('#audioa').dataset.url = song_order[currentSong].a.filename;
     $('#audiob').dataset.url = song_order[currentSong].b.filename;
-    $('#progress').MaterialProgress.setProgress(((currentSong) / song_order.length) * 100);
     $('#progresstext').innerHTML = `${currentSong} / ${song_order.length}`;
-    refreshView();
+    if (currentView != 0) refreshView();
     return true;
 }
 
@@ -80,4 +77,3 @@ $('#buttonb').addEventListener('click', () => {
     });
    nextSong();
 });
-
