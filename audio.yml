@@ -5,9 +5,11 @@
   b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
 - id: 2
   title: 'tarp'
+  cat: '440hz-432hz'
   a: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '432hz'}
   b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
 - id: 3
   title: 'tarp'
+  cat: '440hz-432hz'
   a: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '432hz'}
   b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
