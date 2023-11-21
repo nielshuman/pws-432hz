@@ -38,6 +38,8 @@ function switchSong(n) {
     currentSong = n;
     $('#audioa').dataset.url = song_order[currentSong].a.filename;
     $('#audiob').dataset.url = song_order[currentSong].b.filename;
+    $('#progress').MaterialProgress.setProgress(((currentSong) / song_order.length) * 100);
+    $('#progresstext').innerHTML = `${currentSong} / ${song_order.length}`;
     refreshView();
     return true;
 }
