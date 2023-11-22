@@ -83,10 +83,7 @@ def downloadtrim(output_path, url, start_time="0:00", end_time=None, fade_durati
     # Delete the temporary audio file
     os.remove('_temp.wav')
 
-videos = [
-    ["https://www.youtube.com/watch?v=NlprozGcs80", "2:06"],
-    ['https://www.youtube.com/watch?v=l-dYNttdgl0', '0:01'],
-]
+videos = []
 
 # read videos from csv
 import csv

@@ -1,13 +1,5 @@
 - a:
     cat: '440'
-    filename: audio/440/Pachelbel-Canon_In_D.wav
-  b:
-    cat: '432'
-    filename: audio/432/Pachelbel-Canon_In_D.wav
-  cat: 440-432
-  title: Pachelbel-Canon_In_D
-- a:
-    cat: '440'
     filename: audio/440/Vivaldi-Spring.wav
   b:
     cat: '432'
@@ -16,9 +8,49 @@
   title: Vivaldi-Spring
 - a:
     cat: '440'
-    filename: audio/440/In_Heaven_there_is_n.wav
+    filename: audio/440/Tchaikovsky-Waltz_of.wav
   b:
     cat: '432'
-    filename: audio/432/In_Heaven_there_is_n.wav
+    filename: audio/432/Tchaikovsky-Waltz_of.wav
   cat: 440-432
-  title: In_Heaven_there_is_n
+  title: Tchaikovsky-Waltz_of
+- a:
+    cat: '440'
+    filename: audio/440/Saint-Saens__The_Swa.wav
+  b:
+    cat: '432'
+    filename: audio/432/Saint-Saens__The_Swa.wav
+  cat: 440-432
+  title: Saint-Saens__The_Swa
+- a:
+    cat: '440'
+    filename: audio/440/J.S._Bach_Violin_Con.wav
+  b:
+    cat: '432'
+    filename: audio/432/J.S._Bach_Violin_Con.wav
+  cat: 440-432
+  title: J.S._Bach_Violin_Con
+- a:
+    cat: '440'
+    filename: audio/440/Pachelbel-Canon_In_D.wav
+  b:
+    cat: '432'
+    filename: audio/432/Pachelbel-Canon_In_D.wav
+  cat: 440-432
+  title: Pachelbel-Canon_In_D
+- a:
+    cat: '440'
+    filename: audio/440/Mozart_Symphony_No._.wav
+  b:
+    cat: '432'
+    filename: audio/432/Mozart_Symphony_No._.wav
+  cat: 440-432
+  title: Mozart_Symphony_No._
+- a:
+    cat: '440'
+    filename: "audio/440/Saint-Sa\xEBns_Symphony.wav"
+  b:
+    cat: '432'
+    filename: "audio/432/Saint-Sa\xEBns_Symphony.wav"
+  cat: 440-432
+  title: "Saint-Sa\xEBns_Symphony"
