@@ -5,11 +5,12 @@ import yaml
 
 def pitch_shift(input_file, output_file, factor):
     try:
-        subprocess.run(
+        subprocess.call(
             ['ffmpeg', 
              '-i', input_file, 
              '-af', 'aresample=44100, asetrate={},aresample=44100'.format(factor*44100), 
              output_file])
+
         print(f"Successfully pitch shifted {input_file} to {output_file}")
     except Exception as e:
         print(f"Error pitch shifting {input_file} to {output_file}: {str(e)}")
