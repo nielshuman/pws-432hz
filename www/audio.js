@@ -62,7 +62,7 @@ function previousSong() {
 
 $('#buttona').addEventListener('click', () => {
     db.collection('votes').add({
-        song_id: song_order[currentSong].id, 
+        song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
         vote: song_order[currentSong].a.cat
     });
@@ -71,7 +71,7 @@ $('#buttona').addEventListener('click', () => {
 
 $('#buttonb').addEventListener('click', () => {
     db.collection('votes').add({
-        song_id: song_order[currentSong].id, 
+        song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
         vote: song_order[currentSong].b.cat
     });

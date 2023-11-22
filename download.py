@@ -96,7 +96,7 @@ with open('videos.csv', newline='') as csvfile:
         videos.append(row)
 
 for video in videos:
-    # Download and trim the video
+    # Download and trim the video                               
 
     title = get_video_title(video[0])
     # print Downloading video title with progress

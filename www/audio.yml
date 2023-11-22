@@ -1,15 +1,12 @@
-- id: 1
-  title: 'tarp'
-  cat: '440hz-432hz'
-  a: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '432hz'}
-  b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
-- id: 2
-  title: 'tarp'
-  cat: '440hz-432hz'
-  a: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '432hz'}
-  b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
-- id: 3
-  title: 'tarp'
-  cat: '440hz-432hz'
-  a: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '432hz'}
-  b: {filename: 'https://essential-audio-player.net/audio/Song.mp3', cat: '440hz'}
+- cat: 440-432
+  filename_432: audio/432/Pachelbel-Canon_In_D.wav
+  filename_440: audio/440/Pachelbel-Canon_In_D.wav
+  title: Pachelbel-Canon_In_D
+- cat: 440-432
+  filename_432: audio/432/Vivaldi-Spring.wav
+  filename_440: audio/440/Vivaldi-Spring.wav
+  title: Vivaldi-Spring
+- cat: 440-432
+  filename_432: audio/432/In_Heaven_there_is_n.wav
+  filename_440: audio/440/In_Heaven_there_is_n.wav
+  title: In_Heaven_there_is_n
