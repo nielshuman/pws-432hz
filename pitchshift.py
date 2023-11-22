@@ -14,6 +14,9 @@ def pitch_shift(input_file, output_file, factor):
     except Exception as e:
         print(f"Error pitch shifting {input_file} to {output_file}: {str(e)}")
 
+os.makedirs('www/audio/432', exist_ok=True)
+os.makedirs('www/audio/440', exist_ok=True)
+
 for file in os.listdir('downloads'):
     if not file.endswith('.wav'):
         continue
@@ -26,9 +29,11 @@ for file in os.listdir('downloads'):
     audio.append({
         'title': title,
         'cat': cat,
-        'filename_440': filename_440,
-        'filename_432': filename_432
+        'a': {'filename': filename_440, 'cat': '440'},
+        'b': {'filename': filename_432, 'cat': '432'}
     })
+
+    print(audio)
     with open('www/audio.yml', 'w') as outfile:
         yaml.dump(audio, outfile, default_flow_style=False)
     

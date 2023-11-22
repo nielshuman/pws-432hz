@@ -1,12 +1,24 @@
-- cat: 440-432
-  filename_432: audio/432/Pachelbel-Canon_In_D.wav
-  filename_440: audio/440/Pachelbel-Canon_In_D.wav
+- a:
+    cat: '440'
+    filename: audio/440/Pachelbel-Canon_In_D.wav
+  b:
+    cat: '432'
+    filename: audio/432/Pachelbel-Canon_In_D.wav
+  cat: 440-432
   title: Pachelbel-Canon_In_D
-- cat: 440-432
-  filename_432: audio/432/Vivaldi-Spring.wav
-  filename_440: audio/440/Vivaldi-Spring.wav
+- a:
+    cat: '440'
+    filename: audio/440/Vivaldi-Spring.wav
+  b:
+    cat: '432'
+    filename: audio/432/Vivaldi-Spring.wav
+  cat: 440-432
   title: Vivaldi-Spring
-- cat: 440-432
-  filename_432: audio/432/In_Heaven_there_is_n.wav
-  filename_440: audio/440/In_Heaven_there_is_n.wav
+- a:
+    cat: '440'
+    filename: audio/440/In_Heaven_there_is_n.wav
+  b:
+    cat: '432'
+    filename: audio/432/In_Heaven_there_is_n.wav
+  cat: 440-432
   title: In_Heaven_there_is_n
