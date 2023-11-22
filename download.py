@@ -95,6 +95,8 @@ with open('videos.csv', newline='') as csvfile:
     for row in reader:
         videos.append(row)
 
+os.makedirs('downloads', exist_ok=True)
+
 for video in videos:
     # Download and trim the video                               
 
