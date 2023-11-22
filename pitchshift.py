@@ -23,8 +23,8 @@ for file in os.listdir('downloads'):
         continue
     cat = '440-432'
     title = file[:-4]
-    filename_440 = f'audio/440/{file}'
-    filename_432 = f'audio/432/{file}'
+    filename_440 = f'audio/440/{title}.mp3'
+    filename_432 = f'audio/432/{title}.mp3'
     pitch_shift(f'downloads/{file}', f'www/{filename_440}', 1)
     pitch_shift(f'downloads/{file}', f'www/{filename_432}', 400/440)
     audio.append({
