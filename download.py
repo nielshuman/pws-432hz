@@ -90,6 +90,11 @@ import csv
 with open('videos.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
+        if len(row) == 0:
+            continue
+        # in the first element of the row, remove EVERYTHING after &list=
+        row[0] = row[0].split('&list=')[0]
+        # print(row)
         videos.append(row)
 
 os.makedirs('downloads', exist_ok=True)
