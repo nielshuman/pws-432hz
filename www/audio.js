@@ -1,6 +1,7 @@
 let currentSong;
 let song_order = [];
 let votes = [];
+const AMOUNT_OF_SONGS = 10;
 
 const firebaseConfig = {
     apiKey: "AIzaSyDaf-ix7SOWU1hz3AMle-hK1NCU2e19TzU",
@@ -27,7 +28,12 @@ function shuffle(array) {
 
 fetch('/audio.yml').then(r=>r.text()).then(t => {
     const audio = jsyaml.load(t);
-    song_order = shuffle(audio.slice(0)).slice(0, 20);
+    let shuffled = shuffle(audio.slice(0));
+    // make sure the are no songs with the same title
+    console.log(shuffled.length);
+    shuffled = shuffled.filter((v, i, a) => a.findIndex(t => (t.title === v.title)) === i);
+    console.log(shuffled.length);
+    song_order = shuffled.slice(0, AMOUNT_OF_SONGS);
     switchSong(0);
 });
 
@@ -76,4 +82,13 @@ $('#buttonb').addEventListener('click', () => {
         vote: song_order[currentSong].b.cat
     });
    nextSong();
+});
+
+$('#buttonx').addEventListener('click', () => {
+    db.collection('votes').add({
+        song_title: song_order[currentSong].title, 
+        cat: song_order[currentSong].cat,
+        vote: 'x'
+    });
+    nextSong();
 });

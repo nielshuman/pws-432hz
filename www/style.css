@@ -19,7 +19,7 @@
     background-color: white;
     border-radius: 10px;
     width: 60vw;
-    height: 60vh;
+    height: 70vh;
     transition: 0.5s;
     opacity: 0;
     pointer-events: none;
@@ -71,20 +71,6 @@ p {
     grid-gap: 50px;
 }
 
-@media (max-width:850px) {
-    #ding2 {
-        grid-template-columns: 1fr;
-
-    }
-}
-
-@media (max-width:850px) {
-    .view {
-        width: 90vw;
-        height: 90vh;
-    }
-}
-
 .playerbox {
     align-items: center;
     display: flex;
@@ -105,4 +91,27 @@ p {
 
 h1 {
     margin-bottom: 10px;
+}
+
+#buttonx {
+    grid-column: span 2;
+}
+
+
+@media (max-width:850px) {
+    #ding2 {
+        grid-template-columns: 1fr;
+
+    }
+    #buttonx {
+        grid-column: span 1;
+    }
+    
+}
+
+@media (max-width:850px) {
+    .view {
+        width: 90vw;
+        height: 90vh;
+    }
 }
