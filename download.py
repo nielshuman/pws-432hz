@@ -2,6 +2,8 @@ import yt_dlp
 import pydub
 import os
 
+noend = False
+
 def download_audio(url, output_path):
     # Set options for yt-dlp
     ydl_opts = {
@@ -30,6 +32,8 @@ def trim_and_fade_audio(input_path, output_path, start_time, end_time, fade_dura
     # Load the audio file
     audio = pydub.AudioSegment.from_wav(input_path)
 
+    if noend:
+        end_time_ms = len(audio)
     # Trim the audio between start and end times
     trimmed_audio = audio[start_time_ms:end_time_ms]
 
