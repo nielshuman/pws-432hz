@@ -1,8 +1,7 @@
 import subprocess, soundfile
 audio = []
 import os
-import yaml
-
+import yaml, random
 def pitch_shift(input_file, output_file, factor):
     try:
         subprocess.call(
@@ -26,12 +25,17 @@ for file in os.listdir('downloads'):
     filename_440 = f'audio/440/{title}.mp3'
     filename_432 = f'audio/432/{title}.mp3'
     pitch_shift(f'downloads/{file}', f'www/{filename_440}', 1)
-    pitch_shift(f'downloads/{file}', f'www/{filename_432}', 428/440)
+    pitch_shift(f'downloads/{file}', f'www/{filename_432}', 426/440)
+    a = {'filename': filename_440, 'cat': '440'}
+    b = {'filename': filename_432, 'cat': '432'}
+        # 50% chance to swap a and b
+    if random.random() < 0.5:
+        a, b = b, a
     audio.append({
         'title': title,
         'cat': cat,
-        'a': {'filename': filename_440, 'cat': '440'},
-        'b': {'filename': filename_432, 'cat': '432'}
+        'a': a,
+        'b': b
     })
 
     print(audio)

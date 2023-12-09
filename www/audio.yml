@@ -23,11 +23,11 @@
   cat: 440-432
   title: Saint-Saens__The_Swa
 - a:
-    cat: '440'
-    filename: audio/440/J.S._Bach_Violin_Con.mp3
-  b:
     cat: '432'
     filename: audio/432/J.S._Bach_Violin_Con.mp3
+  b:
+    cat: '440'
+    filename: audio/440/J.S._Bach_Violin_Con.mp3
   cat: 440-432
   title: J.S._Bach_Violin_Con
 - a:
@@ -39,11 +39,11 @@
   cat: 440-432
   title: Pachelbel-Canon_In_D
 - a:
-    cat: '440'
-    filename: audio/440/Mozart_Symphony_No._.mp3
-  b:
     cat: '432'
     filename: audio/432/Mozart_Symphony_No._.mp3
+  b:
+    cat: '440'
+    filename: audio/440/Mozart_Symphony_No._.mp3
   cat: 440-432
   title: Mozart_Symphony_No._
 - a:
