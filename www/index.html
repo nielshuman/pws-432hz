@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Hello, world!</title>
+    <title>PWS Enquête</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
     <link rel="icon" href="favicon.png">
@@ -27,11 +27,10 @@
     <h1>Moment geduld aub...</h1>
     <div id="app">
         <div class="view">
-            <h1>PWS Enquête</h1>
-            <p>
-                Verhaaltje (work in progress) <br>
-                Wij zijn twee leerlingen van het Harens Lyceum en wij doen ons profielwerkstuk over het gebruik verschillende stemmingen bij muziek. <br>
-                Bedankt dat je meedoet aan ons onderzoek! <br>
+                <h1>PWS Enquête</h1>
+                <p>
+                    Verhaaltje (work in progress) <br>
+                    Wij, twee leerlingen van het Harens Lyceum, onderzoeken het effect van verschillende stemmingen in muziek voor ons profielwerkstuk. Dank je wel dat je wilt bijdragen aan ons onderzoek! <br>
                  <br>
             </p>
             <div class="hcenter">
@@ -42,15 +41,17 @@
             </div>
         </div>
         <div class="view">
-            <h1>Onderzoek</h1>
+            <h1>Instructie</h1>
             <p>
-                Dit is een onderzoek naar ... <br>
-                U krijgt telkens twee geluidsfragmenten te horen. Hierbij stellen wij de vraag bij welk van deze twee u zich meer ontspannen en comfortabel voelt. U krijgt na afloop van deze test nog een aantal vragen, let u alstublieft op: <br>
+                U krijgt telkens twee geluidsfragmenten te horen. Hierbij stellen wij de vraag bij welk van deze twee u zich meer ontspannen en comfortabel voelt.<br>
+                <strong> Hoewel de fragmenten erg op elkaar kunnen lijken, vragen wij u bij een lichte voorkeur toch de keuze te maken, en alleen op 'geen voorkeur' te klikken als u écht helemaal geen verschil hoort. </strong> <br>
+                U krijgt na afloop van deze test nog een aantal vragen, let u alstublieft op: <br> <strong>
                 <ul>
                     <li>In hoeverre vindt u de fragmenten op elkaar lijken?</li>
                     <li>In hoeverre was u zeker van uw keuze?</li>
                     <li>Wat merkte u voor verschil? / Waarom maakte u uw keuzes?</li>
                 </ul>
+                </strong>
             </p>
             <div class="hcenter">
                 <button onclick="nextView()"
@@ -60,7 +61,7 @@
             </div>
         </div>
         <div class="view">
-            <h1>Welke klinkt meer ontspannend?</h1>
+            <h1>Gelet op ontspanning, <br> welke heeft uw voorkeur?</h1>
             <div id="progressbox">
                 <div id="progress" class="mdl-progress mdl-js-progress"></div>
                 <div id="progresstext">0 / ?</div>
@@ -88,7 +89,10 @@
                     class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                     B
                 </button>
-
+                <button id="buttonx"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                Geen voorkeur
+            </button>
             </div>
         </div>
         <div class="view" id="v1">

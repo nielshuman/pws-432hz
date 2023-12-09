@@ -16,31 +16,37 @@ def pitch_shift(input_file, output_file, factor):
 
 os.makedirs('www/audio/432', exist_ok=True)
 os.makedirs('www/audio/440', exist_ok=True)
+os.makedirs('www/audio/448', exist_ok=True)
 
-for file in os.listdir('downloads'):
-    if not file.endswith('.wav'):
-        continue
-    cat = '440-432'
-    title = file[:-4]
-    filename_440 = f'audio/440/{title}.mp3'
-    filename_432 = f'audio/432/{title}.mp3'
-    pitch_shift(f'downloads/{file}', f'www/{filename_440}', 1)
-    pitch_shift(f'downloads/{file}', f'www/{filename_432}', 426/440)
-    a = {'filename': filename_440, 'cat': '440'}
-    b = {'filename': filename_432, 'cat': '432'}
-        # 50% chance to swap a and b
-    if random.random() < 0.5:
-        a, b = b, a
-    audio.append({
-        'title': title,
-        'cat': cat,
-        'a': a,
-        'b': b
-    })
+def shift_and_add(files, original, target):
+    for file in files:
+        if not file.endswith('.wav'):
+            continue
+        cat = f'{original}-{target}'
+        title = file[:-4]
+        filename_a = f'audio/{original}/{title}.mp3'
+        filename_b = f'audio/{target}/{title}.mp3'
+        if not os.path.exists(f'www/{filename_a}'):
+            pitch_shift(f'downloads/{file}', f'www/{filename_a}', 1)
+        pitch_shift(f'downloads/{file}', f'www/{filename_b}', (target/original)**2)
+        a = {'filename': filename_a, 'cat': f'{original}'}
+        b = {'filename': filename_b, 'cat': f'{target}'}
+            # 50% chance to swap a and b
+        if random.random() < 0.5:
+            a, b = b, a
+        audio.append({
+            'title': title,
+            'cat': cat,
+            'a': a,
+            'b': b
+        })
 
-    print(audio)
-    with open('www/audio.yml', 'w') as outfile:
-        yaml.dump(audio, outfile, default_flow_style=False)
+        # print(audio)
+        with open('www/audio.yml', 'w') as outfile:
+            yaml.dump(audio, outfile, default_flow_style=False)
+
     
+shift_and_add(os.listdir('downloads'), 440, 448)
+shift_and_add(os.listdir('downloads'), 440, 432)
 
 # pitch_shift('example2.mp3', 'example2_pitchshifted.mp3', 432/440)
