@@ -2,6 +2,7 @@ let currentSong;
 let song_order = [];
 let votes = [];
 const AMOUNT_OF_SONGS = 10;
+let formLoads = 0;
 
 const firebaseConfig = {
     apiKey: "AIzaSyDaf-ix7SOWU1hz3AMle-hK1NCU2e19TzU",
@@ -91,4 +92,11 @@ $('#buttonx').addEventListener('click', () => {
         vote: 'x'
     });
     nextSong();
+});
+
+$('#gform').addEventListener('load', (e) => {
+    formLoads++;
+    if (formLoads > 1) {
+        nextView();
+    }
 });
