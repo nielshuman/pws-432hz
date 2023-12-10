@@ -28,8 +28,8 @@ const switchView = (n) => {
         setTimeout(() => {
             views[n].classList.add('active');
             Essential_Audio.init();
-        }, 1000);
-    }, 1000);
+        }, 100);
+    }, 400);
 };
 
 function refreshView() {
