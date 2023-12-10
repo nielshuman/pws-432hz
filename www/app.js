@@ -7,6 +7,11 @@ const views = $$('.view');
 views[currentView].style.display = 'flex';
 views[currentView].classList.add('active');
 
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (!isSafari) {
+    
+}
+
 
 function nextView() {
     if (currentView < views.length - 1) {
