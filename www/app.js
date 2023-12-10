@@ -17,7 +17,8 @@ if (!isSafari) {
 }
 
 if (isSafari) {
-    $('progress').style.display = 'none';
+    $('#progress').style.display = 'none';
+    $('#progresstext').style.width = '100%';
 }
     
 
