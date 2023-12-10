@@ -19,14 +19,14 @@
     background-color: white;
     border-radius: 10px;
     width: 60vw;
-    height: 70vh;
+    height: 67vh;
     transition: 0.5s;
     opacity: 0;
     pointer-events: none;
     display: none;
     flex-flow: column;
     max-width: 800px;
-    max-height: 550px;
+    max-height: 650px;
 }
 
 .active {
@@ -37,7 +37,7 @@
 h1 {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 36px;
+    font-size: 35px;
 }
 
 p {
@@ -95,16 +95,19 @@ h1 {
 
 #buttonx {
     grid-column: span 2;
+    margin-top: -10px;
 }
 
 
 @media (max-width:850px) {
     #ding2 {
         grid-template-columns: 1fr;
+        grid-gap: 30px;
 
     }
     #buttonx {
         grid-column: span 1;
+        margin-top: 0px;
     }
     
 }
