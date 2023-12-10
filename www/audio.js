@@ -2,7 +2,9 @@ let currentSong;
 let song_order = [];
 let votes = [];
 const AMOUNT_OF_SONGS = 10;
+const COLLECTION = 'pilot';
 let formLoads = 0;
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyDaf-ix7SOWU1hz3AMle-hK1NCU2e19TzU",
@@ -68,7 +70,7 @@ function previousSong() {
 }
 
 $('#buttona').addEventListener('click', () => {
-    db.collection('votes').add({
+    db.collection(COLLECTION).add({
         song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
         vote: song_order[currentSong].a.cat
@@ -77,7 +79,7 @@ $('#buttona').addEventListener('click', () => {
 });
 
 $('#buttonb').addEventListener('click', () => {
-    db.collection('votes').add({
+    db.collection(COLLECTION).add({
         song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
         vote: song_order[currentSong].b.cat
@@ -86,7 +88,7 @@ $('#buttonb').addEventListener('click', () => {
 });
 
 $('#buttonx').addEventListener('click', () => {
-    db.collection('votes').add({
+    db.collection(COLLECTION).add({
         song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
         vote: 'x'
