@@ -16,6 +16,10 @@ if (!isSafari) {
     $('#audiob').dataset.preload = true;
 }
 
+if (isSafari) {
+    $('progress').style.display = 'none';
+}
+    
 
 function nextView() {
     if (currentView < views.length - 1) {
