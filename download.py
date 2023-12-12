@@ -94,20 +94,22 @@ import csv
 with open('videos.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
-        if len(row) == 0:
-            continue
         # in the first element of the row, remove EVERYTHING after &list=
-        row[0] = row[0].split('&list=')[0]
+        if len(row) > 0:
+            row[0] = row[0].split('&list=')[0]
         # print(row)
         videos.append(row)
 
 os.makedirs('downloads', exist_ok=True)
 
+prefix = ''
 for video in videos:
     # Download and trim the video                               
-
+    if len(video) == 0:
+        prefix = 'J'
+        continue
     title = get_video_title(video[0])
     # print Downloading video title with progress
     print(f'[{videos.index(video)+1}/{len(videos)}] Downloading {title}...')
 
-    downloadtrim(f"downloads/{title}.wav", *video)
+    downloadtrim(f"downloads/{prefix}{title}.wav", *video)

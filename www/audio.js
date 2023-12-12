@@ -2,7 +2,7 @@ let currentSong;
 let song_order = [];
 let votes = [];
 const AMOUNT_OF_SONGS = 10;
-const COLLECTION = 'pilot';
+const COLLECTION = 'votes';
 let formLoads = 0;
 
 
@@ -69,31 +69,27 @@ function previousSong() {
     }
 }
 
-$('#buttona').addEventListener('click', () => {
+function submitVote(v) {
     db.collection(COLLECTION).add({
         song_title: song_order[currentSong].title, 
         cat: song_order[currentSong].cat,
-        vote: song_order[currentSong].a.cat
+        cat2: song_order[currentSong].cat2,
+        vote: v
     });
     nextSong();
+}
+
+
+$('#buttona').addEventListener('click', () => {
+    submitVote(song_order[currentSong].a.cat);
 });
 
 $('#buttonb').addEventListener('click', () => {
-    db.collection(COLLECTION).add({
-        song_title: song_order[currentSong].title, 
-        cat: song_order[currentSong].cat,
-        vote: song_order[currentSong].b.cat
-    });
-   nextSong();
+    submitVote(song_order[currentSong].b.cat);
 });
 
 $('#buttonx').addEventListener('click', () => {
-    db.collection(COLLECTION).add({
-        song_title: song_order[currentSong].title, 
-        cat: song_order[currentSong].cat,
-        vote: 'x'
-    });
-    nextSong();
+    submitVote('x');
 });
 
 $('#gform').addEventListener('load', (e) => {
