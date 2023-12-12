@@ -5,14 +5,16 @@
     cat: '448'
     filename: audio/448/Vivaldi-Spring.mp3
   cat: 440-448
+  cat2: Classical
   title: Vivaldi-Spring
 - a:
-    cat: '448'
-    filename: audio/448/Tchaikovsky-Waltz_of.mp3
-  b:
     cat: '440'
     filename: audio/440/Tchaikovsky-Waltz_of.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Tchaikovsky-Waltz_of.mp3
   cat: 440-448
+  cat2: Classical
   title: Tchaikovsky-Waltz_of
 - a:
     cat: '440'
@@ -21,30 +23,25 @@
     cat: '448'
     filename: audio/448/Saint-Saens__The_Swa.mp3
   cat: 440-448
+  cat2: Classical
   title: Saint-Saens__The_Swa
 - a:
     cat: '448'
-    filename: audio/448/J.S._Bach_Violin_Con.mp3
+    filename: audio/448/Pachelbel-Canon_In_D.mp3
   b:
-    cat: '440'
-    filename: audio/440/J.S._Bach_Violin_Con.mp3
-  cat: 440-448
-  title: J.S._Bach_Violin_Con
-- a:
     cat: '440'
     filename: audio/440/Pachelbel-Canon_In_D.mp3
-  b:
-    cat: '448'
-    filename: audio/448/Pachelbel-Canon_In_D.mp3
   cat: 440-448
+  cat2: Classical
   title: Pachelbel-Canon_In_D
 - a:
-    cat: '448'
-    filename: audio/448/Mozart_Symphony_No._.mp3
-  b:
     cat: '440'
     filename: audio/440/Mozart_Symphony_No._.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Mozart_Symphony_No._.mp3
   cat: 440-448
+  cat2: Classical
   title: Mozart_Symphony_No._
 - a:
     cat: '440'
@@ -53,14 +50,16 @@
     cat: '448'
     filename: "audio/448/Saint-Sa\xEBns_Symphony.mp3"
   cat: 440-448
+  cat2: Classical
   title: "Saint-Sa\xEBns_Symphony"
 - a:
-    cat: '440'
-    filename: "audio/440/3_Gymnop\xE9dies_I._Len.mp3"
-  b:
     cat: '448'
     filename: "audio/448/3_Gymnop\xE9dies_I._Len.mp3"
+  b:
+    cat: '440'
+    filename: "audio/440/3_Gymnop\xE9dies_I._Len.mp3"
   cat: 440-448
+  cat2: Classical
   title: "3_Gymnop\xE9dies_I._Len"
 - a:
     cat: '440'
@@ -69,22 +68,16 @@
     cat: '448'
     filename: audio/448/I_giorni_Andante.mp3
   cat: 440-448
+  cat2: Classical
   title: I_giorni_Andante
 - a:
     cat: '440'
-    filename: audio/440/J._S._Bach_Cantata_N.mp3
+    filename: audio/440/Puccini_Tosca__Act_3.mp3
   b:
-    cat: '448'
-    filename: audio/448/J._S._Bach_Cantata_N.mp3
-  cat: 440-448
-  title: J._S._Bach_Cantata_N
-- a:
     cat: '448'
     filename: audio/448/Puccini_Tosca__Act_3.mp3
-  b:
-    cat: '440'
-    filename: audio/440/Puccini_Tosca__Act_3.mp3
   cat: 440-448
+  cat2: Classical
   title: Puccini_Tosca__Act_3
 - a:
     cat: '448'
@@ -93,14 +86,16 @@
     cat: '440'
     filename: audio/440/Billie_Holiday-Blue_.mp3
   cat: 440-448
+  cat2: Jazz
   title: Billie_Holiday-Blue_
 - a:
-    cat: '448'
-    filename: audio/448/Peace.mp3
-  b:
     cat: '440'
     filename: audio/440/Peace.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Peace.mp3
   cat: 440-448
+  cat2: Jazz
   title: Peace
 - a:
     cat: '448'
@@ -109,14 +104,16 @@
     cat: '440'
     filename: audio/440/Everybody's_Jumpin'.mp3
   cat: 440-448
+  cat2: Jazz
   title: Everybody's_Jumpin'
 - a:
-    cat: '448'
-    filename: audio/448/Georgia_On_My_Mind.mp3
-  b:
     cat: '440'
     filename: audio/440/Georgia_On_My_Mind.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Georgia_On_My_Mind.mp3
   cat: 440-448
+  cat2: Jazz
   title: Georgia_On_My_Mind
 - a:
     cat: '440'
@@ -125,6 +122,7 @@
     cat: '448'
     filename: audio/448/All_of_Me.mp3
   cat: 440-448
+  cat2: Jazz
   title: All_of_Me
 - a:
     cat: '440'
@@ -133,14 +131,16 @@
     cat: '448'
     filename: audio/448/Miles_Davis-Freddie_.mp3
   cat: 440-448
+  cat2: Jazz
   title: Miles_Davis-Freddie_
 - a:
-    cat: '440'
-    filename: audio/440/Autumn_Leaves.mp3
-  b:
     cat: '448'
     filename: audio/448/Autumn_Leaves.mp3
+  b:
+    cat: '440'
+    filename: audio/440/Autumn_Leaves.mp3
   cat: 440-448
+  cat2: Jazz
   title: Autumn_Leaves
 - a:
     cat: '448'
@@ -149,54 +149,79 @@
     cat: '440'
     filename: audio/440/Waltz_for_Debby_(tak.mp3
   cat: 440-448
+  cat2: Jazz
   title: Waltz_for_Debby_(tak
 - a:
-    cat: '448'
-    filename: audio/448/Midnight_Saxophone.mp3
-  b:
     cat: '440'
     filename: audio/440/Midnight_Saxophone.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Midnight_Saxophone.mp3
   cat: 440-448
+  cat2: Jazz
   title: Midnight_Saxophone
 - a:
-    cat: '440'
-    filename: audio/440/Blue_Magic.mp3
-  b:
     cat: '448'
     filename: audio/448/Blue_Magic.mp3
+  b:
+    cat: '440'
+    filename: audio/440/Blue_Magic.mp3
   cat: 440-448
+  cat2: Jazz
   title: Blue_Magic
 - a:
-    cat: '448'
-    filename: audio/448/Autumn_Is_Here.mp3
-  b:
     cat: '440'
     filename: audio/440/Autumn_Is_Here.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Autumn_Is_Here.mp3
   cat: 440-448
+  cat2: Jazz
   title: Autumn_Is_Here
 - a:
-    cat: '448'
-    filename: audio/448/Billie's_Blues.mp3
-  b:
     cat: '440'
     filename: audio/440/Billie's_Blues.mp3
+  b:
+    cat: '448'
+    filename: audio/448/Billie's_Blues.mp3
   cat: 440-448
+  cat2: Jazz
   title: Billie's_Blues
 - a:
     cat: '440'
-    filename: audio/440/Vivaldi-Spring.mp3
+    filename: audio/440/j._S._Bach_Cantata_N.mp3
   b:
-    cat: '432'
-    filename: audio/432/Vivaldi-Spring.mp3
-  cat: 440-432
-  title: Vivaldi-Spring
+    cat: '448'
+    filename: audio/448/j._S._Bach_Cantata_N.mp3
+  cat: 440-448
+  cat2: Classical
+  title: j._S._Bach_Cantata_N
+- a:
+    cat: '440'
+    filename: audio/440/j.S._Bach_Violin_Con.mp3
+  b:
+    cat: '448'
+    filename: audio/448/j.S._Bach_Violin_Con.mp3
+  cat: 440-448
+  cat2: Classical
+  title: j.S._Bach_Violin_Con
 - a:
     cat: '432'
-    filename: audio/432/Tchaikovsky-Waltz_of.mp3
+    filename: audio/432/Vivaldi-Spring.mp3
   b:
     cat: '440'
-    filename: audio/440/Tchaikovsky-Waltz_of.mp3
+    filename: audio/440/Vivaldi-Spring.mp3
   cat: 440-432
+  cat2: Classical
+  title: Vivaldi-Spring
+- a:
+    cat: '440'
+    filename: audio/440/Tchaikovsky-Waltz_of.mp3
+  b:
+    cat: '432'
+    filename: audio/432/Tchaikovsky-Waltz_of.mp3
+  cat: 440-432
+  cat2: Classical
   title: Tchaikovsky-Waltz_of
 - a:
     cat: '440'
@@ -205,63 +230,53 @@
     cat: '432'
     filename: audio/432/Saint-Saens__The_Swa.mp3
   cat: 440-432
+  cat2: Classical
   title: Saint-Saens__The_Swa
 - a:
     cat: '432'
-    filename: audio/432/J.S._Bach_Violin_Con.mp3
+    filename: audio/432/Pachelbel-Canon_In_D.mp3
   b:
-    cat: '440'
-    filename: audio/440/J.S._Bach_Violin_Con.mp3
-  cat: 440-432
-  title: J.S._Bach_Violin_Con
-- a:
     cat: '440'
     filename: audio/440/Pachelbel-Canon_In_D.mp3
-  b:
-    cat: '432'
-    filename: audio/432/Pachelbel-Canon_In_D.mp3
   cat: 440-432
+  cat2: Classical
   title: Pachelbel-Canon_In_D
 - a:
-    cat: '440'
-    filename: audio/440/Mozart_Symphony_No._.mp3
-  b:
     cat: '432'
     filename: audio/432/Mozart_Symphony_No._.mp3
+  b:
+    cat: '440'
+    filename: audio/440/Mozart_Symphony_No._.mp3
   cat: 440-432
+  cat2: Classical
   title: Mozart_Symphony_No._
 - a:
-    cat: '440'
-    filename: "audio/440/Saint-Sa\xEBns_Symphony.mp3"
-  b:
     cat: '432'
     filename: "audio/432/Saint-Sa\xEBns_Symphony.mp3"
+  b:
+    cat: '440'
+    filename: "audio/440/Saint-Sa\xEBns_Symphony.mp3"
   cat: 440-432
+  cat2: Classical
   title: "Saint-Sa\xEBns_Symphony"
 - a:
-    cat: '432'
-    filename: "audio/432/3_Gymnop\xE9dies_I._Len.mp3"
-  b:
     cat: '440'
     filename: "audio/440/3_Gymnop\xE9dies_I._Len.mp3"
+  b:
+    cat: '432'
+    filename: "audio/432/3_Gymnop\xE9dies_I._Len.mp3"
   cat: 440-432
+  cat2: Classical
   title: "3_Gymnop\xE9dies_I._Len"
 - a:
-    cat: '432'
-    filename: audio/432/I_giorni_Andante.mp3
-  b:
     cat: '440'
     filename: audio/440/I_giorni_Andante.mp3
-  cat: 440-432
-  title: I_giorni_Andante
-- a:
-    cat: '432'
-    filename: audio/432/J._S._Bach_Cantata_N.mp3
   b:
-    cat: '440'
-    filename: audio/440/J._S._Bach_Cantata_N.mp3
+    cat: '432'
+    filename: audio/432/I_giorni_Andante.mp3
   cat: 440-432
-  title: J._S._Bach_Cantata_N
+  cat2: Classical
+  title: I_giorni_Andante
 - a:
     cat: '440'
     filename: audio/440/Puccini_Tosca__Act_3.mp3
@@ -269,6 +284,7 @@
     cat: '432'
     filename: audio/432/Puccini_Tosca__Act_3.mp3
   cat: 440-432
+  cat2: Classical
   title: Puccini_Tosca__Act_3
 - a:
     cat: '432'
@@ -277,38 +293,43 @@
     cat: '440'
     filename: audio/440/Billie_Holiday-Blue_.mp3
   cat: 440-432
+  cat2: Jazz
   title: Billie_Holiday-Blue_
 - a:
-    cat: '432'
-    filename: audio/432/Peace.mp3
-  b:
     cat: '440'
     filename: audio/440/Peace.mp3
+  b:
+    cat: '432'
+    filename: audio/432/Peace.mp3
   cat: 440-432
+  cat2: Jazz
   title: Peace
 - a:
-    cat: '440'
-    filename: audio/440/Everybody's_Jumpin'.mp3
-  b:
     cat: '432'
     filename: audio/432/Everybody's_Jumpin'.mp3
+  b:
+    cat: '440'
+    filename: audio/440/Everybody's_Jumpin'.mp3
   cat: 440-432
+  cat2: Jazz
   title: Everybody's_Jumpin'
 - a:
-    cat: '440'
-    filename: audio/440/Georgia_On_My_Mind.mp3
-  b:
     cat: '432'
     filename: audio/432/Georgia_On_My_Mind.mp3
-  cat: 440-432
-  title: Georgia_On_My_Mind
-- a:
-    cat: '432'
-    filename: audio/432/All_of_Me.mp3
   b:
     cat: '440'
-    filename: audio/440/All_of_Me.mp3
+    filename: audio/440/Georgia_On_My_Mind.mp3
   cat: 440-432
+  cat2: Jazz
+  title: Georgia_On_My_Mind
+- a:
+    cat: '440'
+    filename: audio/440/All_of_Me.mp3
+  b:
+    cat: '432'
+    filename: audio/432/All_of_Me.mp3
+  cat: 440-432
+  cat2: Jazz
   title: All_of_Me
 - a:
     cat: '440'
@@ -317,6 +338,7 @@
     cat: '432'
     filename: audio/432/Miles_Davis-Freddie_.mp3
   cat: 440-432
+  cat2: Jazz
   title: Miles_Davis-Freddie_
 - a:
     cat: '432'
@@ -325,6 +347,7 @@
     cat: '440'
     filename: audio/440/Autumn_Leaves.mp3
   cat: 440-432
+  cat2: Jazz
   title: Autumn_Leaves
 - a:
     cat: '432'
@@ -333,6 +356,7 @@
     cat: '440'
     filename: audio/440/Waltz_for_Debby_(tak.mp3
   cat: 440-432
+  cat2: Jazz
   title: Waltz_for_Debby_(tak
 - a:
     cat: '432'
@@ -341,6 +365,7 @@
     cat: '440'
     filename: audio/440/Midnight_Saxophone.mp3
   cat: 440-432
+  cat2: Jazz
   title: Midnight_Saxophone
 - a:
     cat: '440'
@@ -349,6 +374,7 @@
     cat: '432'
     filename: audio/432/Blue_Magic.mp3
   cat: 440-432
+  cat2: Jazz
   title: Blue_Magic
 - a:
     cat: '440'
@@ -357,12 +383,32 @@
     cat: '432'
     filename: audio/432/Autumn_Is_Here.mp3
   cat: 440-432
+  cat2: Jazz
   title: Autumn_Is_Here
 - a:
-    cat: '432'
-    filename: audio/432/Billie's_Blues.mp3
-  b:
     cat: '440'
     filename: audio/440/Billie's_Blues.mp3
+  b:
+    cat: '432'
+    filename: audio/432/Billie's_Blues.mp3
   cat: 440-432
+  cat2: Jazz
   title: Billie's_Blues
+- a:
+    cat: '432'
+    filename: audio/432/j._S._Bach_Cantata_N.mp3
+  b:
+    cat: '440'
+    filename: audio/440/j._S._Bach_Cantata_N.mp3
+  cat: 440-432
+  cat2: Classical
+  title: j._S._Bach_Cantata_N
+- a:
+    cat: '440'
+    filename: audio/440/j.S._Bach_Violin_Con.mp3
+  b:
+    cat: '432'
+    filename: audio/432/j.S._Bach_Violin_Con.mp3
+  cat: 440-432
+  cat2: Classical
+  title: j.S._Bach_Violin_Con

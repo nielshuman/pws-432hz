@@ -22,8 +22,14 @@ def shift_and_add(files, original, target):
     for file in files:
         if not file.endswith('.wav'):
             continue
+
         cat = f'{original}-{target}'
         title = file[:-4]
+        if file.startswith('J'):
+            cat2 = 'Jazz'
+            title = title[1:]
+        else:
+            cat2 = 'Classical'
         filename_a = f'audio/{original}/{title}.mp3'
         filename_b = f'audio/{target}/{title}.mp3'
         if not os.path.exists(f'www/{filename_a}'):
@@ -37,6 +43,7 @@ def shift_and_add(files, original, target):
         audio.append({
             'title': title,
             'cat': cat,
+            'cat2': cat2,
             'a': a,
             'b': b
         })
