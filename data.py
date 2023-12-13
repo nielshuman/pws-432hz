@@ -1,6 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
 from collections import Counter
+from copy import deepcopy
 import json
 
 cred = credentials.Certificate("key.json")
@@ -9,7 +10,7 @@ db = firestore.client()
 
 out = {}
 
-votes_ref = db.collection("votes")
+votes_ref = db.collection("pilot")
 votes_stream = votes_ref.stream()
 votes = []
 cats = {
@@ -18,8 +19,8 @@ cats = {
 }
 
 genres = {
-    'Jazz': cats.copy(),
-    'Classical': cats.copy(),
+    'Jazz': deepcopy(cats),
+    'Classical': deepcopy(cats),
 }
 
 for vote in votes_stream:
@@ -29,7 +30,7 @@ for vote in votes_stream:
     genres[v['cat2']][v['cat']].append(v['vote'])
 
 print(f'Total votes: {len(votes)}')
-
+print(genres)
 count_440_432 = Counter(cats['440-432'])
 count_440_448 = Counter(cats['440-448'])
 
