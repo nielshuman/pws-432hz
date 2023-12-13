@@ -45,11 +45,10 @@ for genre in genres:
     for cat in genres[genre]:
         out[f'{genre} ({cat})'] = dict(Counter(genres[genre][cat]))
     out[f'{genre} (low-high)'] = {
-        'low': out[f'{genre} (440-432)']['432'] + out[f'{genre} (440-448)']['440'],
-        'high': out[f'{genre} (440-432)']['440'] + out[f'{genre} (440-448)']['448'],
-        'x': out[f'{genre} (440-432)']['x'] + out[f'{genre} (440-448)']['x']
+        'low': out[f'{genre} (440-432)'].get('432', 0) + out[f'{genre} (440-448)'].get('440', 0),
+        'high': out[f'{genre} (440-432)'].get('440', 0) + out[f'{genre} (440-448)'].get('448', 0),
+        'x': out[f'{genre} (440-432)'].get('x', 0) + out[f'{genre} (440-448)'].get('x', 0)
     }
-
 # export out as json
 with open('data.json', 'w') as outfile:
     json.dump(out, outfile) 
