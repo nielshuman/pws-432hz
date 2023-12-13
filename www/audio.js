@@ -1,7 +1,7 @@
 let currentSong;
 let song_order = [];
 let votes = [];
-const AMOUNT_OF_SONGS = 10;
+const AMOUNT_OF_SONGS = 8;
 const COLLECTION = 'votes';
 let formLoads = 0;
 
