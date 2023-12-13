@@ -10,7 +10,7 @@ db = firestore.client()
 
 out = {}
 
-votes_ref = db.collection("pilot")
+votes_ref = db.collection("votes")
 votes_stream = votes_ref.stream()
 votes = []
 cats = {
@@ -30,7 +30,12 @@ for vote in votes_stream:
     genres[v['cat2']][v['cat']].append(v['vote'])
 
 print(f'Total votes: {len(votes)}')
-print(genres)
+print(f'Votes in 440-432: {len(cats["440-432"])}')
+print(f'Votes in 440-448: {len(cats["440-448"])}')
+print(f'Votes in Jazz: {len(genres["Jazz"]["440-432"]) + len(genres["Jazz"]["440-448"])}')
+print(f'Votes in Classical: {len(genres["Classical"]["440-432"]) + len(genres["Classical"]["440-448"])}')
+
+# print(genres)
 count_440_432 = Counter(cats['440-432'])
 count_440_448 = Counter(cats['440-448'])
 
