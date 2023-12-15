@@ -57,4 +57,4 @@ for genre in genres:
     }
 # export out as json
 with open('data.json', 'w') as outfile:
-    json.dump(out, outfile) 
+    json.dump(out, outfile, sort_keys=True, indent=4) 
