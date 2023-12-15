@@ -1,8 +1,11 @@
 import yt_dlp
 import pydub
-import os
+import os, sys
 
 noend = False
+getTitles = False
+titles = []
+
 
 def download_audio(url, output_path):
     # Set options for yt-dlp
@@ -43,7 +46,7 @@ def trim_and_fade_audio(input_path, output_path, start_time, end_time, fade_dura
     # Save the trimmed and faded audio
     faded_audio.export(output_path, format="wav")
 
-def get_video_title(url):
+def get_video_title(url, restrictions=True):
     # Create yt-dlp instance
     ydl = yt_dlp.YoutubeDL({'quiet': True})
 
@@ -58,17 +61,18 @@ def get_video_title(url):
 
     # Remove any illegal characters from the title
     illegal_chars = ['<', '>', ':', '"', '/', '\\', '|', '?', '*']
-    for char in illegal_chars:
-        title = title.replace(char, '')
+    if restrictions:
+        for char in illegal_chars:
+            title = title.replace(char, '')
+        title = title.replace(' - ', '-')
+        title = title.replace(' ', '_')
+        title = title[:20]
 
     # replace ' - ' with '-'
-    title = title.replace(' - ', '-')
 
     # replace spaces with underscores
-    title = title.replace(' ', '_')
 
     # constrain title to 15 characters
-    title = title[:20]
     return title
 
 def downloadtrim(output_path, url, start_time="0:00", end_time=None, fade_duration=1000):
@@ -100,6 +104,23 @@ with open('videos.csv', newline='') as csvfile:
         # print(row)
         videos.append(row)
 
+if getTitles:
+    for video in videos:
+        if len(video) == 0:
+            continue
+        titles.append(get_video_title(video[0], False))
+        sys.stdout.write(f"\r{len(titles)}/{len(videos)}")
+        sys.stdout.flush()
+    print()
+    # print(titles)
+    # output all video titles to video_titles.txt, one per line
+    with open('video_titles.txt', 'w') as f:
+        for title in titles:
+            f.write(f"{title}\n")
+    exit()
+    
+
+
 os.makedirs('downloads', exist_ok=True)
 
 prefix = ''
@@ -113,3 +134,4 @@ for video in videos:
     print(f'[{videos.index(video)+1}/{len(videos)}] Downloading {title}...')
 
     downloadtrim(f"downloads/{prefix}{title}.wav", *video)
+
