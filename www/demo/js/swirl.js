@@ -224,30 +224,3 @@ function start() {
   particleCount = 700;
   initParticles();
 }
-// start = initParticles;
-
-function to432() {
-  change_text(432, 75);
-  setTimeout(start, 2000);
-}
-
-function to440() {
-  change_text(440, 75);
-  stop();
-}
-
-let numEl = document.getElementById('num');
-let num = 432;
-
-function change_text(target, interval) {
-  numEl.innerHTML = num + ' Hz';
-  if (num == target) return;
-  if (num < target) {
-    num++;
-    setTimeout(change_text, interval, target, interval*1.3);
-  }
-  else {
-    num--;
-    setTimeout(change_text, interval, target, interval*1.3);
-  }
-}
