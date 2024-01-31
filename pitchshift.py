@@ -2,6 +2,8 @@ import subprocess, soundfile
 audio = []
 import os
 import yaml, random
+from pydub.utils import mediainfo
+
 def pitch_shift(input_file, output_file, factor):
     try:
         subprocess.call(
@@ -20,7 +22,7 @@ os.makedirs('www/audio/448', exist_ok=True)
 
 def shift_and_add(files, original, target):
     for file in files:
-        if not file.endswith('.wav'):
+        if not file.endswith('.mp3'):
             continue
 
         cat = f'{original}-{target}'
@@ -40,8 +42,9 @@ def shift_and_add(files, original, target):
             # 50% chance to swap a and b
         if random.random() < 0.5:
             a, b = b, a
+        nice_title = mediainfo(f'downloads/{file}').get('TAG',None).get('title',None)
         audio.append({
-            'title': title,
+            'title': nice_title,
             'cat': cat,
             'cat2': cat2,
             'a': a,

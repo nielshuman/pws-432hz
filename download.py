@@ -25,7 +25,7 @@ def download_audio(url, output_path):
     # Download the video
     ydl.download([url])
 
-def trim_and_fade_audio(input_path, output_path, start_time, end_time, fade_duration):
+def trim_and_fade_audio(input_path, output_path, start_time, end_time, fade_duration, title=None):
     # Convert start and end times from minutes:seconds string to milliseconds
     start_minutes, start_seconds = map(int, start_time.split(':'))
     end_minutes, end_seconds = map(int, end_time.split(':'))
@@ -42,9 +42,12 @@ def trim_and_fade_audio(input_path, output_path, start_time, end_time, fade_dura
 
     # Fade in and out the trimmed audio
     faded_audio = trimmed_audio.fade_in(fade_duration).fade_out(fade_duration)
-
-    # Save the trimmed and faded audio
-    faded_audio.export(output_path, format="wav")
+    
+    if title is not None:
+        faded_audio.export(output_path, format="mp3", tags={'title': title})
+    else:
+        # Save the trimmed and faded audio
+        faded_audio.export(output_path, format="mp3")
 
 def get_video_title(url, restrictions=True):
     # Create yt-dlp instance
@@ -73,9 +76,9 @@ def get_video_title(url, restrictions=True):
     # replace spaces with underscores
 
     # constrain title to 15 characters
-    return title
+    return title, info.get('title')
 
-def downloadtrim(output_path, url, start_time="0:00", end_time=None, fade_duration=1000):
+def downloadtrim(output_path, title, url, start_time="0:00", end_time=None, fade_duration=1000):
     # Download the audio
     download_audio(url, '_temp')
 
@@ -87,7 +90,7 @@ def downloadtrim(output_path, url, start_time="0:00", end_time=None, fade_durati
         end_time = f"{end_minutes}:{end_seconds}"
     
     # Trim and fade the audio
-    trim_and_fade_audio('_temp.wav', output_path, start_time, end_time, fade_duration)
+    trim_and_fade_audio('_temp.wav', output_path, start_time, end_time, fade_duration, title)
     # Delete the temporary audio file
     os.remove('_temp.wav')
 
@@ -129,9 +132,9 @@ for video in videos:
     if len(video) == 0:
         prefix = 'J'
         continue
-    title = get_video_title(video[0])
+    title, nice_title = get_video_title(video[0])
     # print Downloading video title with progress
     print(f'[{videos.index(video)+1}/{len(videos)}] Downloading {title}...')
 
-    downloadtrim(f"downloads/{prefix}{title}.wav", *video)
+    downloadtrim(f"downloads/{prefix}{title}.mp3", nice_title, *video)
 

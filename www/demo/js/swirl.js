@@ -210,7 +210,7 @@ function stop() {
   if (particleProps.length > 0) {
     // remove last 9 particles
     particleProps = particleProps.slice(0, particleProps.length - 3*9);
-    setTimeout(stop, 10);
+    setTimeout(stop, 5);
   }
   else {
     console.log('stopped');

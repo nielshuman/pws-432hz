@@ -3,6 +3,8 @@ let num = 432;
 let audio = [];
 let currentVariant = 432;
 
+let DELAY = 50
+
 let currentSong = {};
 let songIndex = -1;
 let el432 = new Audio();
@@ -23,18 +25,20 @@ function change_text(target, interval) {
 
 function to432() {
     if (currentVariant == 432) return;
+    if (num != currentVariant) return;
     currentVariant = 432;
 
     el440.pause();
     el432.currentTime = el440.currentTime * (el432.duration / el440.duration);
     el432.play();
 
-    change_text(432, 75);
-    setTimeout(start, 2000);
+    change_text(432, DELAY);
+    setTimeout(start, 0);
   }
   
   function to440() {
     if (currentVariant == 440) return;
+    if (num != currentVariant) return;
     currentVariant = 440;
 
     el432.pause();
@@ -87,7 +91,7 @@ function play() {
   }
 }
 
-// add key event listeners, A will play 432, S will play 440
+// add key event listeners, l for 432, h for 440, space for next song
 document.addEventListener('keydown', function(event) {
   if (event.key === 'l') {
     to432();
