@@ -2,7 +2,7 @@ import yt_dlp
 import pydub
 import os, sys
 
-noend = True
+noend = False
 getTitles = False
 titles = []
 
