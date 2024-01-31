@@ -79,8 +79,9 @@ function nextSong() {
     el432 = new Audio('/' + currentSong.b.filename);
     el440 = new Audio('/' + currentSong.a.filename);
   }
-
+  
   play()
+  document.getElementById('sub').innerHTML = 'Huidig nummer: ' + currentSong.title;
 }
 
 function play() {
